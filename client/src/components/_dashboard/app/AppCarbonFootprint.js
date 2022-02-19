@@ -3,7 +3,7 @@ import { alpha, styled } from '@mui/material/styles';
 import { Card, Typography } from '@mui/material';
 // utils
 import { fShortenNumber } from '../../../utils/formatNumber';
-import box from '../../../assets/box.svg';
+import footprint from '../../../assets/foot.svg';
 
 // ----------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ export default function AppCarbonFootprint() {
   return (
     <RootStyle>
       <IconWrapperStyle>
-        <img src={box} alt="box" />
+        <img src={footprint} alt="box" />
       </IconWrapperStyle>
       <Typography variant="h3">{fShortenNumber(EMISSION)} kg</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>

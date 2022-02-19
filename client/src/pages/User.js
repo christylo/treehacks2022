@@ -33,9 +33,9 @@ import USERLIST from '../_mocks_/user';
 
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
+  { id: 'company', label: 'Energy Stored (kWh)', alignRight: false },
+  { id: 'role', label: 'CO2 Emitted (kg)', alignRight: false },
+  { id: 'isVerified', label: 'Earnings (USD)', alignRight: false },
   { id: 'status', label: 'Status', alignRight: false },
   { id: '' }
 ];
@@ -136,7 +136,7 @@ export default function User() {
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            User
+            Boxes
           </Typography>
           <Button
             variant="contained"
@@ -144,7 +144,7 @@ export default function User() {
             to="#"
             startIcon={<Icon icon={plusFill} />}
           >
-            New User
+            Add Box
           </Button>
         </Stack>
 
@@ -193,7 +193,7 @@ export default function User() {
                             <Stack direction="row" alignItems="center" spacing={2}>
                               <Avatar alt={name} src={avatarUrl} />
                               <Typography variant="subtitle2" noWrap>
-                                {name}
+                                Box {name.split(' ')[0]}
                               </Typography>
                             </Stack>
                           </TableCell>
@@ -203,7 +203,7 @@ export default function User() {
                           <TableCell align="left">
                             <Label
                               variant="ghost"
-                              color={(status === 'banned' && 'error') || 'success'}
+                              color={(status === 'inactive' && 'error') || 'success'}
                             >
                               {sentenceCase(status)}
                             </Label>
