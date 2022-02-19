@@ -5,13 +5,13 @@ import Page from '../components/Page';
 import {
   AppTasks,
   AppMoneyEarned,
-  AppBoxesInUse,
+  AppCarbonFootprint,
   AppCurrentCoinMining,
   AppNewsUpdate,
   AppPercentageHeated,
   AppOrderTimeline,
   AppCryptoMined,
-  AppMiningEarnings,
+  AppOverview,
   AppTrafficBySite,
   AppCurrentSubject,
   AppConversionRates
@@ -21,7 +21,7 @@ import {
 
 export default function DashboardApp() {
   return (
-    <Page title="Dashboard | Minimal-UI">
+    <Page title="Dashboard | box with rounded corners">
       <Container maxWidth="xl">
         <Box sx={{ pb: 5 }}>
           <Typography variant="h4">Hi, Welcome back</Typography>
@@ -37,36 +37,29 @@ export default function DashboardApp() {
             <AppCurrentCoinMining />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppBoxesInUse />
+            <AppCarbonFootprint />
           </Grid>
           <Grid item xs={12} md={6} lg={8}>
-            <AppMiningEarnings />
+            <AppOverview />
           </Grid>
-
           <Grid item xs={12} md={6} lg={4}>
             <AppCryptoMined />
           </Grid>
-
           <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates />
           </Grid>
-
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentSubject />
           </Grid>
-
           <Grid item xs={12} md={6} lg={8}>
             <AppNewsUpdate />
           </Grid>
-
           <Grid item xs={12} md={6} lg={4}>
             <AppOrderTimeline />
           </Grid>
-
           <Grid item xs={12} md={6} lg={4}>
             <AppTrafficBySite />
           </Grid>
-
           <Grid item xs={12} md={6} lg={8}>
             <AppTasks />
           </Grid>

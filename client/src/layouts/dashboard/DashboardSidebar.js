@@ -102,19 +102,14 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
 
           <Box sx={{ textAlign: 'center' }}>
             <Typography gutterBottom variant="h6">
-              Donate to charity!
+              Donate!
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              Give back through a donation to a charity of your choice.
+              Go carbon neutral and offset your carbon footprint.
             </Typography>
           </Box>
 
-          <Button
-            fullWidth
-            href="https://material-ui.com/store/items/minimal-dashboard/"
-            target="_blank"
-            variant="contained"
-          >
+          <Button fullWidth href="https://carbonfund.org/" target="_blank" variant="contained">
             Donate
           </Button>
         </Stack>

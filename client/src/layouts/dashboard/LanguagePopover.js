@@ -9,13 +9,13 @@ import MenuPopover from '../../components/MenuPopover';
 
 const LANGS = [
   {
-    value: 'en',
-    label: 'English',
+    value: 'USA',
+    label: 'United States',
     icon: '/static/icons/ic_flag_en.svg'
   },
   {
-    value: 'fr',
-    label: 'French',
+    value: 'CAN',
+    label: 'Canada',
     icon: '/static/icons/ic_flag_fr.svg'
   }
 ];

@@ -33,17 +33,17 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const NUMBOXES = 3;
+const EMISSION = 8.4;
 
-export default function AppBoxesInUse() {
+export default function AppCarbonFootprint() {
   return (
     <RootStyle>
       <IconWrapperStyle>
         <img src={box} alt="box" />
       </IconWrapperStyle>
-      <Typography variant="h3">{fShortenNumber(NUMBOXES)} Boxes</Typography>
+      <Typography variant="h3">{fShortenNumber(EMISSION)} kg</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        In Use
+        CO2 Emitted
       </Typography>
     </RootStyle>
   );

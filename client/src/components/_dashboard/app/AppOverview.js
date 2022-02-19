@@ -9,39 +9,39 @@ import { BaseOptionChart } from '../../charts';
 
 const CHART_DATA = [
   {
-    name: 'Box Ryan',
+    name: 'Earnings (USD)',
     type: 'column',
-    data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+    data: [23, 26, 22, 27, 26, 22, 23, 24, 20, 30, 31]
   },
   {
-    name: 'Box Kathy',
+    name: 'Energy Stored (0.1 kWh)',
     type: 'area',
-    data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+    data: [13, 11, 15, 17, 14, 11, 11, 16, 16, 17, 18]
   },
   {
-    name: 'Box Jacky',
+    name: 'Temperature (°C)',
     type: 'line',
-    data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+    data: [9, 9, 8, 8, 7, 7, 8, 7, 9, 8, 12]
   }
 ];
 
-export default function AppMiningEarnings() {
+export default function AppOverview() {
   const chartOptions = merge(BaseOptionChart(), {
     stroke: { width: [0, 2, 3] },
     plotOptions: { bar: { columnWidth: '11%', borderRadius: 4 } },
     fill: { type: ['solid', 'gradient', 'solid'] },
     labels: [
-      '01/01/2003',
-      '02/01/2003',
-      '03/01/2003',
-      '04/01/2003',
-      '05/01/2003',
-      '06/01/2003',
-      '07/01/2003',
-      '08/01/2003',
-      '09/01/2003',
-      '10/01/2003',
-      '11/01/2003'
+      '02/07/2022',
+      '02/08/2022',
+      '02/09/2022',
+      '02/10/2022',
+      '02/11/2022',
+      '02/12/2022',
+      '02/13/2022',
+      '02/14/2022',
+      '02/15/2022',
+      '02/16/2022',
+      '02/17/2022'
     ],
     xaxis: { type: 'datetime' },
     tooltip: {
@@ -50,7 +50,7 @@ export default function AppMiningEarnings() {
       y: {
         formatter: (y) => {
           if (typeof y !== 'undefined') {
-            return `${y.toFixed(0)} USD`;
+            return `${y.toFixed(0)}`;
           }
           return y;
         }
@@ -60,7 +60,7 @@ export default function AppMiningEarnings() {
 
   return (
     <Card>
-      <CardHeader title="Mining Earnings" subheader="(+43%) than last year" />
+      <CardHeader title="Overview" subheader="(+43%) than last month" />
       <Box sx={{ p: 3, pb: 1 }} dir="ltr">
         <ReactApexChart type="line" series={CHART_DATA} options={chartOptions} height={364} />
       </Box>
