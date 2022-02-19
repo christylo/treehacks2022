@@ -47,7 +47,7 @@ export default function EcommerceShop() {
   };
 
   return (
-    <Page title="Dashboard: Products | box with rounded corners">
+    <Page title="box with rounded corners">
       <Container>
         <Typography variant="h4" sx={{ mb: 5 }}>
           Products

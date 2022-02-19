@@ -7,6 +7,8 @@ import lockFill from '@iconify/icons-eva/lock-fill';
 import personAddFill from '@iconify/icons-eva/person-add-fill';
 import alertTriangleFill from '@iconify/icons-eva/alert-triangle-fill';
 import boxIcon from '@iconify/icons-akar-icons/box';
+import thermometer2 from '@iconify/icons-fa/thermometer-2';
+
 // ----------------------------------------------------------------------
 
 const getIcon = (name) => <Icon icon={name} width={22} height={22} />;
@@ -18,14 +20,14 @@ const sidebarConfig = [
     icon: getIcon(pieChart2Fill)
   },
   {
-    title: 'boxes',
+    title: 'boxes overview',
     path: '/dashboard/user',
     icon: getIcon(boxIcon)
   },
   {
-    title: 'product',
+    title: 'temperature regulation',
     path: '/dashboard/products',
-    icon: getIcon(shoppingBagFill)
+    icon: getIcon(thermometer2)
   },
   {
     title: 'login',

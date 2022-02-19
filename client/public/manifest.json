@@ -1,6 +1,6 @@
 {
-  "short_name": "Minimal App",
-  "name": "React Material Minimal UI Kit",
+  "short_name": "box with rounded corners",
+  "name": "box with rounded corners",
   "icons": [
     {
       "src": "favicon/android-chrome-192x192.png",
