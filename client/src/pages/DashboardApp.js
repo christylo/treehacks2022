@@ -10,8 +10,8 @@ import {
   AppNewsUpdate,
   AppPercentageHeated,
   AppOrderTimeline,
-  AppCurrentVisits,
-  AppWebsiteVisits,
+  AppCryptoMined,
+  AppMiningEarnings,
   AppTrafficBySite,
   AppCurrentSubject,
   AppConversionRates
@@ -40,11 +40,11 @@ export default function DashboardApp() {
             <AppBoxesInUse />
           </Grid>
           <Grid item xs={12} md={6} lg={8}>
-            <AppWebsiteVisits />
+            <AppMiningEarnings />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentVisits />
+            <AppCryptoMined />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>

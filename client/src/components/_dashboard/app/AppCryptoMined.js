@@ -33,7 +33,7 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 const CHART_DATA = [4344, 5435, 1443, 4443];
 
-export default function AppCurrentVisits() {
+export default function AppCryptoMined() {
   const theme = useTheme();
 
   const chartOptions = merge(BaseOptionChart(), {
@@ -43,7 +43,7 @@ export default function AppCurrentVisits() {
       theme.palette.warning.main,
       theme.palette.error.main
     ],
-    labels: ['America', 'Asia', 'Europe', 'Africa'],
+    labels: ['BTC', 'ETH', 'XMR', 'LTC'],
     stroke: { colors: [theme.palette.background.paper] },
     legend: { floating: true, horizontalAlign: 'center' },
     dataLabels: { enabled: true, dropShadow: { enabled: false } },
@@ -63,7 +63,7 @@ export default function AppCurrentVisits() {
 
   return (
     <Card>
-      <CardHeader title="Current Visits" />
+      <CardHeader title="Crypto Mined" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="pie" series={CHART_DATA} options={chartOptions} height={280} />
       </ChartWrapperStyle>

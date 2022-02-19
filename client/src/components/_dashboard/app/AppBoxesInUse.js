@@ -33,7 +33,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const NUMBOXES = 2;
+const NUMBOXES = 3;
 
 export default function AppBoxesInUse() {
   return (
