@@ -31,7 +31,7 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [4344, 5435, 1443, 4443];
+const CHART_DATA = [2, 2, 1, 0.5];
 
 export default function AppCryptoMined() {
   const theme = useTheme();

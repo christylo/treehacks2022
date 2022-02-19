@@ -6,7 +6,7 @@ import fileTextFill from '@iconify/icons-eva/file-text-fill';
 import lockFill from '@iconify/icons-eva/lock-fill';
 import personAddFill from '@iconify/icons-eva/person-add-fill';
 import alertTriangleFill from '@iconify/icons-eva/alert-triangle-fill';
-
+import boxIcon from '@iconify/icons-akar-icons/box';
 // ----------------------------------------------------------------------
 
 const getIcon = (name) => <Icon icon={name} width={22} height={22} />;
@@ -18,19 +18,14 @@ const sidebarConfig = [
     icon: getIcon(pieChart2Fill)
   },
   {
-    title: 'user',
+    title: 'boxes',
     path: '/dashboard/user',
-    icon: getIcon(peopleFill)
+    icon: getIcon(boxIcon)
   },
   {
     title: 'product',
     path: '/dashboard/products',
     icon: getIcon(shoppingBagFill)
-  },
-  {
-    title: 'blog',
-    path: '/dashboard/blog',
-    icon: getIcon(fileTextFill)
   },
   {
     title: 'login',
@@ -41,11 +36,6 @@ const sidebarConfig = [
     title: 'register',
     path: '/register',
     icon: getIcon(personAddFill)
-  },
-  {
-    title: 'Not found',
-    path: '/404',
-    icon: getIcon(alertTriangleFill)
   }
 ];
 
