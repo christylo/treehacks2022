@@ -1,80 +1,52 @@
-import { useFormik } from 'formik';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import plusFill from '@iconify/icons-eva/plus-fill';
+import { Link as RouterLink } from 'react-router-dom';
 // material
-import { Container, Stack, Typography } from '@mui/material';
+import { Grid, Button, Container, Stack, Typography } from '@mui/material';
 // components
 import Page from '../components/Page';
-import {
-  ProductSort,
-  ProductList,
-  ProductCartWidget,
-  ProductFilterSidebar
-} from '../components/_dashboard/products';
+import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../components/_dashboard/blog';
 //
-import PRODUCTS from '../_mocks_/products';
+import POSTS from '../_mocks_/blog';
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceShop() {
-  const [openFilter, setOpenFilter] = useState(false);
+const SORT_OPTIONS = [
+  { value: 'latest', label: 'Latest' },
+  { value: 'popular', label: 'Popular' },
+  { value: 'oldest', label: 'Oldest' }
+];
 
-  const formik = useFormik({
-    initialValues: {
-      gender: '',
-      category: '',
-      colors: '',
-      priceRange: '',
-      rating: ''
-    },
-    onSubmit: () => {
-      setOpenFilter(false);
-    }
-  });
+// ----------------------------------------------------------------------
 
-  const { resetForm, handleSubmit } = formik;
-
-  const handleOpenFilter = () => {
-    setOpenFilter(true);
-  };
-
-  const handleCloseFilter = () => {
-    setOpenFilter(false);
-  };
-
-  const handleResetFilter = () => {
-    handleSubmit();
-    resetForm();
-  };
-
+export default function Products() {
   return (
-    <Page title="box with rounded corners">
+    <Page title="Dashboard: Blog | box with rounded corners">
       <Container>
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Temperature Regulation
-        </Typography>
-
-        <Stack
-          direction="row"
-          flexWrap="wrap-reverse"
-          alignItems="center"
-          justifyContent="flex-end"
-          sx={{ mb: 5 }}
-        >
-          <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
-            <ProductFilterSidebar
-              formik={formik}
-              isOpenFilter={openFilter}
-              onResetFilter={handleResetFilter}
-              onOpenFilter={handleOpenFilter}
-              onCloseFilter={handleCloseFilter}
-            />
-            <ProductSort />
-          </Stack>
+        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
+          <Typography variant="h4" gutterBottom>
+            Blog
+          </Typography>
+          <Button
+            variant="contained"
+            component={RouterLink}
+            to="#"
+            startIcon={<Icon icon={plusFill} />}
+          >
+            New Post
+          </Button>
         </Stack>
 
-        <ProductList products={PRODUCTS} />
-        <ProductCartWidget />
+        <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
+          <BlogPostsSearch posts={POSTS} />
+          <BlogPostsSort options={SORT_OPTIONS} />
+        </Stack>
+
+        <Grid container spacing={3}>
+          {POSTS.map((post, index) => (
+            <BlogPostCard key={post.id} post={post} index={index} />
+          ))}
+        </Grid>
       </Container>
     </Page>
   );

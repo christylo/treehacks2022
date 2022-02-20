@@ -9,7 +9,7 @@ import { BaseOptionChart } from '../../charts';
 
 // ----------------------------------------------------------------------
 
-const CHART_DATA = [{ data: [400, 430] }];
+const CHART_DATA = [{ data: [1.7, 1.9, 1.6, 1.5, 1.3, 1.4, 1.4] }];
 
 export default function AppConversionRates() {
   const chartOptions = merge(BaseOptionChart(), {
@@ -26,24 +26,13 @@ export default function AppConversionRates() {
       bar: { horizontal: true, barHeight: '28%', borderRadius: 2 }
     },
     xaxis: {
-      categories: [
-        'Italy',
-        'Japan'
-        // 'China',
-        // 'Canada',
-        // 'France',
-        // 'Germany',
-        // 'South Korea',
-        // 'Netherlands',
-        // 'United States',
-        // 'United Kingdom'
-      ]
+      categories: ['Feb 13', 'Feb 14', 'Feb 15', 'Feb 16', 'Feb 17', 'Feb 18', 'Feb 19']
     }
   });
 
   return (
     <Card>
-      <CardHeader title="Conversion Rates" subheader="(+43%) than last year" />
+      <CardHeader title="Heat Generated (kWh)" subheader="(+43%) than last week" />
       <Box sx={{ mx: 3 }} dir="ltr">
         <ReactApexChart type="bar" series={CHART_DATA} options={chartOptions} height={364} />
       </Box>

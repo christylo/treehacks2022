@@ -9,29 +9,32 @@ import linkedinFill from '@iconify/icons-eva/linkedin-fill';
 import { Box, Grid, Card, Paper, Typography, CardHeader, CardContent } from '@mui/material';
 // utils
 import { fShortenNumber } from '../../../utils/formatNumber';
-
+import renewableEnergy from '../../../assets/renewableEnergy.svg';
+import renewableOutput from '../../../assets/renewableOutput.svg';
+import fossilFuel from '../../../assets/fossilFuel.svg';
+import fossilFuelOutput from '../../../assets/fossilFuelOutput.svg';
 // ----------------------------------------------------------------------
 
 const SOCIALS = [
   {
     name: 'USD per kWh',
-    value: faker.datatype.number(),
-    icon: <Icon icon={facebookFill} color="#1877F2" width={32} height={32} />
+    value: 0.07,
+    icon: <img src={renewableEnergy} alt="footprint" />
   },
   {
     name: 'kg CO2 emitted',
-    value: faker.datatype.number(),
-    icon: <Icon icon={googleFill} color="#DF3E30" width={32} height={32} />
+    value: 8.4,
+    icon: <img src={renewableOutput} alt="footprint" />
   },
   {
     name: 'USD per kWh',
-    value: faker.datatype.number(),
-    icon: <Icon icon={linkedinFill} color="#006097" width={32} height={32} />
+    value: 0.09,
+    icon: <img src={fossilFuel} alt="footprint" />
   },
   {
     name: 'kg CO2 emitted',
-    value: faker.datatype.number(),
-    icon: <Icon icon={twitterFill} color="#1C9CEA" width={32} height={32} />
+    value: 9.43,
+    icon: <img src={fossilFuelOutput} alt="footprint" />
   }
 ];
 
@@ -48,7 +51,11 @@ function SiteItem({ site }) {
     <Grid item xs={6}>
       <Paper variant="outlined" sx={{ py: 2.5, textAlign: 'center' }}>
         <Box sx={{ mb: 0.5 }}>{icon}</Box>
-        <Typography variant="h6">{fShortenNumber(value)}</Typography>
+        {name === 'USD per kWh' ? (
+          <Typography variant="h6">${fShortenNumber(value)}</Typography>
+        ) : (
+          <Typography variant="h6">{fShortenNumber(value)}</Typography>
+        )}
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {name}
         </Typography>
