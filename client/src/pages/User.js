@@ -33,11 +33,10 @@ import USERLIST from '../_mocks_/user';
 
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Energy Stored (kWh)', alignRight: false },
+  { id: 'company', label: 'Energy Stored (Wh)', alignRight: false },
   { id: 'role', label: 'CO2 Emitted (kg)', alignRight: false },
   { id: 'isVerified', label: 'Earnings (USD)', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
-  { id: '' }
+  { id: 'status', label: 'Status', alignRight: false }
 ];
 
 // ----------------------------------------------------------------------
@@ -136,7 +135,7 @@ export default function User() {
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            Boxes
+            Boxes Overview
           </Typography>
           <Button
             variant="contained"
@@ -199,7 +198,7 @@ export default function User() {
                           </TableCell>
                           <TableCell align="left">{company}</TableCell>
                           <TableCell align="left">{role}</TableCell>
-                          <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+                          <TableCell align="left">{isVerified}</TableCell>
                           <TableCell align="left">
                             <Label
                               variant="ghost"

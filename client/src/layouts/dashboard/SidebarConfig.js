@@ -1,13 +1,9 @@
 import { Icon } from '@iconify/react';
 import pieChart2Fill from '@iconify/icons-eva/pie-chart-2-fill';
-import peopleFill from '@iconify/icons-eva/people-fill';
-import shoppingBagFill from '@iconify/icons-eva/shopping-bag-fill';
-import fileTextFill from '@iconify/icons-eva/file-text-fill';
-import lockFill from '@iconify/icons-eva/lock-fill';
-import personAddFill from '@iconify/icons-eva/person-add-fill';
-import alertTriangleFill from '@iconify/icons-eva/alert-triangle-fill';
 import boxIcon from '@iconify/icons-akar-icons/box';
 import thermometer2 from '@iconify/icons-fa/thermometer-2';
+import dollarCircleOutlined from '@iconify/icons-ant-design/dollar-circle-outlined';
+import treeLine from '@iconify/icons-clarity/tree-line';
 
 // ----------------------------------------------------------------------
 
@@ -20,25 +16,35 @@ const sidebarConfig = [
     icon: getIcon(pieChart2Fill)
   },
   {
-    title: 'boxes overview',
+    title: 'boxes',
     path: '/dashboard/user',
     icon: getIcon(boxIcon)
   },
   {
-    title: 'temperature regulation',
+    title: 'sustainability',
+    path: '/dashboard/sustainability',
+    icon: getIcon(treeLine)
+  },
+  {
+    title: 'temperature',
     path: '/dashboard/products',
     icon: getIcon(thermometer2)
   },
   {
-    title: 'login',
-    path: '/login',
-    icon: getIcon(lockFill)
-  },
-  {
-    title: 'register',
-    path: '/register',
-    icon: getIcon(personAddFill)
+    title: 'accounting',
+    path: '/dashboard/accounting',
+    icon: getIcon(dollarCircleOutlined)
   }
+  // {
+  //   title: 'login',
+  //   path: '/login',
+  //   icon: getIcon(lockFill)
+  // },
+  // {
+  //   title: 'register',
+  //   path: '/register',
+  //   icon: getIcon(personAddFill)
+  // }
 ];
 
 export default sidebarConfig;

@@ -39,7 +39,7 @@ export default function AppCarbonFootprint() {
   return (
     <RootStyle>
       <IconWrapperStyle>
-        <img src={footprint} alt="box" />
+        <img src={footprint} alt="footprint" />
       </IconWrapperStyle>
       <Typography variant="h3">{fShortenNumber(EMISSION)} kg</Typography>
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>

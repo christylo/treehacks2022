@@ -14,22 +14,22 @@ import { fShortenNumber } from '../../../utils/formatNumber';
 
 const SOCIALS = [
   {
-    name: 'FaceBook',
+    name: 'USD per kWh',
     value: faker.datatype.number(),
     icon: <Icon icon={facebookFill} color="#1877F2" width={32} height={32} />
   },
   {
-    name: 'Google',
+    name: 'kg CO2 emitted',
     value: faker.datatype.number(),
     icon: <Icon icon={googleFill} color="#DF3E30" width={32} height={32} />
   },
   {
-    name: 'Linkedin',
+    name: 'USD per kWh',
     value: faker.datatype.number(),
     icon: <Icon icon={linkedinFill} color="#006097" width={32} height={32} />
   },
   {
-    name: 'Twitter',
+    name: 'kg CO2 emitted',
     value: faker.datatype.number(),
     icon: <Icon icon={twitterFill} color="#1C9CEA" width={32} height={32} />
   }
@@ -60,7 +60,7 @@ function SiteItem({ site }) {
 export default function AppTrafficBySite() {
   return (
     <Card>
-      <CardHeader title="Traffic by Site" />
+      <CardHeader title="Compare Energy Sources" />
       <CardContent>
         <Grid container spacing={2}>
           {SOCIALS.map((site) => (

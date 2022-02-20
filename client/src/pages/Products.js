@@ -50,7 +50,7 @@ export default function EcommerceShop() {
     <Page title="box with rounded corners">
       <Container>
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Products
+          Temperature Regulation
         </Typography>
 
         <Stack
