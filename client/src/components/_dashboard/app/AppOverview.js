@@ -19,7 +19,7 @@ const CHART_DATA = [
     data: [13, 11, 15, 17, 14, 11, 11, 16, 16, 17, 18]
   },
   {
-    name: 'Temperature (°C)',
+    name: 'Outdoor Temperature (°C)',
     type: 'line',
     data: [9, 9, 8, 8, 7, 7, 8, 7, 9, 8, 12]
   }
