@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/treehacks2022-frontend/static/js/main.1efcf5a2.chunk.js",
+    "main.js.map": "/treehacks2022-frontend/static/js/main.1efcf5a2.chunk.js.map",
+    "runtime-main.js": "/treehacks2022-frontend/static/js/runtime-main.d3138974.js",
+    "runtime-main.js.map": "/treehacks2022-frontend/static/js/runtime-main.d3138974.js.map",
+    "static/css/2.fe61e19b.chunk.css": "/treehacks2022-frontend/static/css/2.fe61e19b.chunk.css",
+    "static/js/2.d96c73bf.chunk.js": "/treehacks2022-frontend/static/js/2.d96c73bf.chunk.js",
+    "static/js/2.d96c73bf.chunk.js.map": "/treehacks2022-frontend/static/js/2.d96c73bf.chunk.js.map",
+    "static/js/3.609fd56f.chunk.js": "/treehacks2022-frontend/static/js/3.609fd56f.chunk.js",
+    "static/js/3.609fd56f.chunk.js.map": "/treehacks2022-frontend/static/js/3.609fd56f.chunk.js.map",
+    "index.html": "/treehacks2022-frontend/index.html",
+    "static/css/2.fe61e19b.chunk.css.map": "/treehacks2022-frontend/static/css/2.fe61e19b.chunk.css.map",
+    "static/js/2.d96c73bf.chunk.js.LICENSE.txt": "/treehacks2022-frontend/static/js/2.d96c73bf.chunk.js.LICENSE.txt",
+    "static/media/coin.485b7343.svg": "/treehacks2022-frontend/static/media/coin.485b7343.svg",
+    "static/media/dollarSign.37cca6e7.svg": "/treehacks2022-frontend/static/media/dollarSign.37cca6e7.svg",
+    "static/media/foot.936b190c.svg": "/treehacks2022-frontend/static/media/foot.936b190c.svg",
+    "static/media/fossilFuel.3ca70348.svg": "/treehacks2022-frontend/static/media/fossilFuel.3ca70348.svg",
+    "static/media/fossilFuelOutput.7517a338.svg": "/treehacks2022-frontend/static/media/fossilFuelOutput.7517a338.svg",
+    "static/media/leaf.08bebe25.svg": "/treehacks2022-frontend/static/media/leaf.08bebe25.svg",
+    "static/media/logo.7530e153.svg": "/treehacks2022-frontend/static/media/logo.7530e153.svg",
+    "static/media/renewableEnergy.7d9029cb.svg": "/treehacks2022-frontend/static/media/renewableEnergy.7d9029cb.svg",
+    "static/media/renewableOutput.4d4ef567.svg": "/treehacks2022-frontend/static/media/renewableOutput.4d4ef567.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3138974.js",
+    "static/css/2.fe61e19b.chunk.css",
+    "static/js/2.d96c73bf.chunk.js",
+    "static/js/main.1efcf5a2.chunk.js"
+  ]
+}
