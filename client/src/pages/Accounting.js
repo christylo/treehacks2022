@@ -1,52 +1,28 @@
-import { Icon } from '@iconify/react';
-import plusFill from '@iconify/icons-eva/plus-fill';
-import { Link as RouterLink } from 'react-router-dom';
-// material
-import { Grid, Button, Container, Stack, Typography } from '@mui/material';
-// components
+import { Container, Typography } from '@mui/material';
 import Page from '../components/Page';
-import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../components/_dashboard/blog';
-//
-import POSTS from '../_mocks_/blog';
-
-// ----------------------------------------------------------------------
-
-const SORT_OPTIONS = [
-  { value: 'latest', label: 'Latest' },
-  { value: 'popular', label: 'Popular' },
-  { value: 'oldest', label: 'Oldest' }
-];
-
-// ----------------------------------------------------------------------
 
 export default function Accounting() {
   return (
-    <Page title="Dashboard: Blog | box with rounded corners">
+    <Page title="box with rounded corners">
       <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography variant="h4" gutterBottom>
-            Blog
-          </Typography>
-          <Button
-            variant="contained"
-            component={RouterLink}
-            to="#"
-            startIcon={<Icon icon={plusFill} />}
-          >
-            New Post
-          </Button>
-        </Stack>
-
-        <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
-          <BlogPostsSearch posts={POSTS} />
-          <BlogPostsSort options={SORT_OPTIONS} />
-        </Stack>
-
-        <Grid container spacing={3}>
-          {POSTS.map((post, index) => (
-            <BlogPostCard key={post.id} post={post} index={index} />
-          ))}
-        </Grid>
+        <Typography>
+          <h2>Features we would like to implement for this accounting overview tab:</h2>
+          <ul>
+            <li>
+              shows more detailed breakdown on earnings for each box (which type of coin was mined,
+              when it was mined, how much the earnings were)
+            </li>
+            <li>
+              show how much power was stored for each box during peak green energy hours (our
+              backend algorithm helps to determine which times of day have execcessive renewable
+              energy being generated to mine more crypto during those hours)
+            </li>
+            <li>
+              contrast using crypto mining to heat the space vs using fossil fuel to heat the space
+              with pricing and C02 emitted
+            </li>
+          </ul>
+        </Typography>
       </Container>
     </Page>
   );

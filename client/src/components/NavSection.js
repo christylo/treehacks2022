@@ -139,7 +139,7 @@ function NavItem({ item, active }) {
       <ListItemStyle
         button
         component="a"
-        href="https://www.google.com"
+        href="https://try.wavefront.com/u/rLcKyJdgCY?t=treehacks"
         sx={{
           ...(isActiveRoot && activeRootStyle)
         }}

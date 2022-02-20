@@ -7,6 +7,6 @@ export { default as AppNewsUpdate } from './AppNewsUpdate';
 export { default as AppMoneyEarned } from './AppMoneyEarned';
 export { default as AppOrderTimeline } from './AppOrderTimeline';
 export { default as AppTasks } from './AppTasks';
-export { default as AppTrafficBySite } from './AppTrafficBySite';
+export { default as CompareEnergySources } from './CompareEnergySources';
 export { default as AppOverview } from './AppOverview';
 export { default as AppPercentageHeated } from './AppPercentageHeated';

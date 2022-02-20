@@ -64,7 +64,7 @@ function SiteItem({ site }) {
   );
 }
 
-export default function AppTrafficBySite() {
+export default function CompareEnergySources() {
   return (
     <Card>
       <CardHeader title="Compare Energy Sources" />

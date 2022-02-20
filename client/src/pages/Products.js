@@ -1,52 +1,38 @@
-import { Icon } from '@iconify/react';
-import plusFill from '@iconify/icons-eva/plus-fill';
-import { Link as RouterLink } from 'react-router-dom';
-// material
-import { Grid, Button, Container, Stack, Typography } from '@mui/material';
-// components
+import { Container, Typography } from '@mui/material';
 import Page from '../components/Page';
-import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../components/_dashboard/blog';
-//
-import POSTS from '../_mocks_/blog';
-
-// ----------------------------------------------------------------------
-
-const SORT_OPTIONS = [
-  { value: 'latest', label: 'Latest' },
-  { value: 'popular', label: 'Popular' },
-  { value: 'oldest', label: 'Oldest' }
-];
-
-// ----------------------------------------------------------------------
 
 export default function Products() {
   return (
-    <Page title="Dashboard: Blog | box with rounded corners">
+    <Page title="box with rounded corners">
       <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography variant="h4" gutterBottom>
-            Blog
-          </Typography>
-          <Button
-            variant="contained"
-            component={RouterLink}
-            to="#"
-            startIcon={<Icon icon={plusFill} />}
-          >
-            New Post
-          </Button>
-        </Stack>
-
-        <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
-          <BlogPostsSearch posts={POSTS} />
-          <BlogPostsSort options={SORT_OPTIONS} />
-        </Stack>
-
-        <Grid container spacing={3}>
-          {POSTS.map((post, index) => (
-            <BlogPostCard key={post.id} post={post} index={index} />
-          ))}
-        </Grid>
+        <Typography>
+          <h2>Features we would like to implement for this temperature overview tab:</h2>
+          <ul>
+            <li>
+              slider component to control heating/mining for selected boxes - feature is already
+              implemented for smart thermostat interface but didn't have enough time to implement on
+              this web app
+            </li>
+            <li>
+              show predictions on how external weather may impact the temperature in the room to
+              better determine efficient temperature for heating the space - model already trained
+              on Maje; just didn't have enough time to build React component for visualizing on web
+              app
+            </li>
+            <li>
+              show predictions on how capacity within the room may impact the temperature in the
+              room to determine efficient temperature for heating the space - was planning on using
+              occupancy detector sensors but they did not arrive on time from Digikey so did not
+              train model on any data
+            </li>
+            <li>
+              show predictions on how different hours of the day may impact the temperature in the
+              room to determine efficient temperature for heating the space - future implementation
+              when businesses already have data on peak hours of usage so we can better train data
+              custom to their needs
+            </li>
+          </ul>
+        </Typography>
       </Container>
     </Page>
   );

@@ -12,7 +12,7 @@ import {
   AppOrderTimeline,
   AppCryptoMined,
   AppOverview,
-  AppTrafficBySite,
+  CompareEnergySources,
   AppCurrentSubject,
   AppConversionRates
 } from '../components/_dashboard/app';
@@ -58,7 +58,7 @@ export default function DashboardApp() {
             <AppOrderTimeline />
           </Grid> */}
           <Grid item xs={12} md={6} lg={4}>
-            <AppTrafficBySite />
+            <CompareEnergySources />
           </Grid>
           {/* <Grid item xs={12} md={6} lg={8}>
             <AppTasks />
